@@ -18,16 +18,16 @@ public class GerenciadorTarefasApiApplication {
 		SpringApplication.run(GerenciadorTarefasApiApplication.class, args);
 	}
 
-	@Autowired
-	private TarefaRepository tarefaRepository;
-
-	@Bean
-	public CommandLineRunner carregarData() {
-
-		return args -> {
-			tarefaRepository.save(new Tarefa(1, "Tarefa1", true, Instant.now(), Instant.now()));
-			tarefaRepository.save(new Tarefa(2, "Tarefa2", true, Instant.now(), Instant.now()));
-			tarefaRepository.save(new Tarefa(3, "Tarefa3", true, Instant.now(), Instant.now()));
-		};
-	}
+//	@Autowired
+//	private TarefaRepository tarefaRepository;
+//
+//	@Bean
+//	public CommandLineRunner carregarData() {
+//
+//		return args -> {
+//			tarefaRepository.save(new Tarefa(1, "Tarefa1", true, Instant.now(), Instant.now()));
+//			tarefaRepository.save(new Tarefa(2, "Tarefa2", true, Instant.now(), Instant.now()));
+//			tarefaRepository.save(new Tarefa(3, "Tarefa3", true, Instant.now(), Instant.now()));
+//		};
+//	}
 }
